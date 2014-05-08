@@ -1,0 +1,22 @@
+en:
+  plugins:
+    material_type: &material_type_attributes
+      label: Material Types
+      works_of_art: Works of Art
+      audiovisual_materials: Audiovisual Materials
+      books: Books
+      electronic_documents: Electronic Documents
+      games: Games
+      microforms: Microforms
+      maps: Maps
+      manuscripts: Manuscripts
+      photographs: Photographs
+      realia: Realia
+      serials: Serials
+      _singular: Material Types
+      _plural: Material Types
+      _frontend:
+        action:
+          add: Add Material Type Flags
+    material_types:
+      <<: *material_type_attributes
