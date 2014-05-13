@@ -1,0 +1,4 @@
+parents:
+  accession:
+    name: material_types
+    cardinality: zero_to_one

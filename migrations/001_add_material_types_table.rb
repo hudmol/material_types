@@ -1,5 +1,3 @@
-require_relative 'utils'
-
 Sequel.migration do
 
   up do
