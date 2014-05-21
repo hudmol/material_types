@@ -1,15 +1,44 @@
-material_types
-==============
+Yale Material Types README
+----------------------
 
-ArchivesSpace plugin to add a material types subrecord to Accession records
+# Getting Started
 
-To install, unpack in the archivesspace/plugins directory, then edit config.rb
-to include this plugin:
+Download the latest release from the Releases tab in Github:
 
-    AppConfig[:plugins] = ["local", "material_types"]
+  https://github.com/hudmol/material_types/releases
 
-Then run the database migration to create the material types table:
+Unzip the release and move it to:
 
-    build/run db:migrate
+    /path/to/archivesspace/plugins
 
-You should now be able to add a Material Types subrecord to Accession records.
+Unzip it:
+
+    $ cd /path/to/archivesspace/plugins
+    $ unzip material_types.zip -d material_types
+
+Enable the plugin by editing the file in `config/config.rb`:
+
+    AppConfig[:plugins] = ['some_plugin', 'material_types']
+
+(Make sure you uncomment this line (i.e., remove the leading '#' if present))
+
+See also:
+
+  https://github.com/archivesspace/archivesspace/blob/master/plugins/README.md
+
+You will need to shutdown archivesspace and migrate the database:
+
+     $ cd /path/to/archivesspace
+     $ scripts/setup-database.sh
+
+See also:
+
+  https://github.com/archivesspace/archivesspace/blob/master/UPGRADING.md
+
+# How it works
+
+When this plugin is installed, you will see a new Material Types subrecord
+form in the Accessions form. After adding a Material Types subrecord to an
+Accession you can check the material types that apply to the Accession.
+
+The Material Types are based on http://vocab.getty.edu/aat
