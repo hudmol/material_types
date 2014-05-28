@@ -20,16 +20,16 @@ en:
           add: Add Material Type Flags
     material_types:
       <<: *material_type_attributes
-  enumerations:
-    boolean_field_query_field:
-      material_type_works_of_art_u_ubool: Material Type - Works of Art?
-      material_type_audiovisual_materials_u_ubool: Material Type - Audiovisual Materials?
-      material_type_books_u_ubool: Material Type - Books?
-      material_type_electronic_documents_u_ubool: Material Type - Electric Documents?
-      material_type_games_u_ubool: Material Type - Games?
-      material_type_microforms_u_ubool: Material Type - Microforms?
-      material_type_maps_u_ubool: Material Type - Maps?
-      material_type_manuscripts_u_ubool: Material Type - Manuscripts?
-      material_type_photographs_u_ubool: Material Type - Photographs?
-      material_type_realia_u_ubool: Material Type - Realia?
-      material_type_serials_u_ubool: Material Type - Serials?
+  advanced_search:
+    boolean:
+      material_type_works_of_art: Material Type - Works of Art?
+      material_type_audiovisual_materials: Material Type - Audiovisual Materials?
+      material_type_books: Material Type - Books?
+      material_type_electronic_documents: Material Type - Electric Documents?
+      material_type_games: Material Type - Games?
+      material_type_microforms: Material Type - Microforms?
+      material_type_maps: Material Type - Maps?
+      material_type_manuscripts: Material Type - Manuscripts?
+      material_type_photographs: Material Type - Photographs?
+      material_type_realia: Material Type - Realia?
+      material_type_serials: Material Type - Serials?
