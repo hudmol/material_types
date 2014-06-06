@@ -1,9 +1,9 @@
 <%
   section_id = "material_types" if section_id.blank?
 
-  columns = [["books", "games", "maps", "microforms", "realia", "serials"],
-             ["audiovisual_materials", "electronic_documents", "manuscripts",
-              "photographs", "works_of_art"]]
+  types = ["books", "games", "maps", "microforms", "realia", "serials",
+           "audiovisual_materials", "electronic_documents", "manuscripts",
+           "photographs", "works_of_art"]
 %>
 
 <section id="<%= section_id %>" class="subrecord-form-dummy">
@@ -11,24 +11,18 @@
 
   <div class="subrecord-form-container">
     <div class="subrecord-form-fields">
-      <table width="100%"><tr>
-        <td width="25%"></td>
-          <%=
-            out = ""
-            columns.each do |col|
-              out += "<td>"
-              col.each do |field|
-                if material_types[field]
-                  out += I18n.t("plugins.material_type.#{field}")
-                  out += "</br>"
-                end
-              end
-              out += "</td>"
-            end
-            out.html_safe
-          %>
-        <td width="25%"></td>
-      </tr></table>
+      <div style="margin-left:120px">
+      <%=
+        out = ""
+        types.each do |field|
+          if material_types[field]
+            out += I18n.t("plugins.material_type.#{field}")
+            out += "</br>"
+          end
+        end
+        out.html_safe
+      %>
+    </div>
     </div>
   </div>
 </section>
