@@ -50,15 +50,16 @@ describe "Material Types plugin user interface" do
       $driver.find_element(:link, "Accession").click
       $driver.clear_and_send_keys([:id, "accession_title_"], "a material accession")
       $driver.complete_4part_id("accession_id_%d_", @fourpartid)
-      $driver.find_element(:css => '#accession_material_types_ .subrecord-form-heading .btn').click
+      $driver.find_element(:css => '#accession_material_types_ .subrecord-form-heading .btn:not(.show-all)').click
 
       $driver.find_element(:id, 'accession_material_types__works_of_art_').click
       $driver.find_element(:id, 'accession_material_types__realia_').click
   
       $driver.click_and_wait_until_gone(:css => "form#accession_form button[type='submit']")
       $driver.click_and_wait_until_gone(:link => "a material accession")
-      $driver.find_element_with_text('//td', /Works of Art/)
-      $driver.find_element_with_text('//td', /Realia/)
+
+      $driver.find_element_with_text('//div', /Works of Art/)
+      $driver.find_element_with_text('//div', /Realia/)
     end
 
   end
