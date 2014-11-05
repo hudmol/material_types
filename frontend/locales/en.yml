@@ -13,12 +13,15 @@ en:
       photographs: Photographs
       realia: Realia
       serials: Serials
+      preference_section: Material Types
       _singular: Material Types
       _plural: Material Types
       _frontend:
         action:
           add: Add Material Type Flags
     material_types:
+      <<: *material_type_attributes
+    defaults:
       <<: *material_type_attributes
   advanced_search:
     boolean:
