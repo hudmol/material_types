@@ -67,7 +67,7 @@ describe "Material Types plugin user interface" do
       $driver.find_element(:css, '.user-container .btn.dropdown-toggle.last').click
       $driver.find_element(:link, "My Repository Preferences").click
 
-      elt = $driver.find_element(:xpath, '//input[@id="preference_defaults__realia_"]')
+      elt = $driver.find_element(:xpath, '//input[@id="preference_defaults__material_type_realia_"]')
       unless elt[@checked]
         elt.click
         $driver.find_element(:css => 'button[type="submit"]').click

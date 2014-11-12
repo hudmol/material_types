@@ -22,7 +22,18 @@ en:
     material_types:
       <<: *material_type_attributes
     defaults:
-      <<: *material_type_attributes
+      material_type_works_of_art: Works of Art
+      material_type_audiovisual_materials: Audiovisual Materials
+      material_type_books: Books
+      material_type_electronic_documents: Electronic Documents
+      material_type_games: Games
+      material_type_microforms: Microforms
+      material_type_maps: Maps
+      material_type_manuscripts: Manuscripts
+      material_type_photographs: Photographs
+      material_type_realia: Realia
+      material_type_serials: Serials
+      material_type_preference_section: Material Types
   advanced_search:
     boolean:
       material_type_works_of_art: Material Type - Works of Art?
