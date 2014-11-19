@@ -41,4 +41,9 @@ When this plugin is installed, you will see a new Material Types subrecord
 form in the Accessions form. After adding a Material Types subrecord to an
 Accession you can check the material types that apply to the Accession.
 
+You can set default Material Types by clicking 'My Repository Preferences'
+in the user dropdown menu. Checked Material Type preferences will be
+checked by default when a new Material Types record is created.
+ 
+
 The Material Types are based on http://vocab.getty.edu/aat
