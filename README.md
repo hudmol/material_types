@@ -1,5 +1,5 @@
 Yale Material Types README
-----------------------
+--------------------------
 
 # Getting Started
 
@@ -14,7 +14,7 @@ Unzip the release and move it to:
 Unzip it:
 
     $ cd /path/to/archivesspace/plugins
-    $ unzip material_types.zip -d material_types
+    $ unzip material_types-vX.X.zip
 
 Enable the plugin by editing the file in `config/config.rb`:
 
