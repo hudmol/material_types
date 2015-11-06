@@ -1,7 +1,7 @@
 <% define_template("material_type", jsonmodel_definition(:material_types)) do |form| %>
   <div class="subrecord-form-fields">
-    <div class="row-fluid">
-      <div class="span6">
+    <div class="row">
+      <div class="col-md-6">
         <%= form.label_and_boolean "books", {:plugin => true}, user_prefs["material_type_books"] %>
         <%= form.label_and_boolean "games", {:plugin => true}, user_prefs["material_type_games"] %>
         <%= form.label_and_boolean "maps", {:plugin => true}, user_prefs["material_type_maps"] %>
@@ -9,7 +9,7 @@
         <%= form.label_and_boolean "realia", {:plugin => true}, user_prefs["material_type_realia"] %>
         <%= form.label_and_boolean "serials", {:plugin => true}, user_prefs["material_type_serials"] %>
       </div>
-      <div class="span6">
+      <div class="col-md-6">
         <%= form.label_and_boolean "audiovisual_materials", {:plugin => true}, user_prefs["material_type_audiovisual_materials"] %>
         <%= form.label_and_boolean "electronic_documents", {:plugin => true}, user_prefs["material_type_electronic_documents"] %>
         <%= form.label_and_boolean "manuscripts", {:plugin => true}, user_prefs["material_type_manuscripts"] %>
