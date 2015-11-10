@@ -1,20 +1,29 @@
 <% define_template("material_type", jsonmodel_definition(:material_types)) do |form| %>
+  <% material_type_form_field = lambda do |name, value| %>
+    <div class="form-group">
+      <div class="col-sm-1 checkbox">
+        <%= form.checkbox name, {:plugin => true}, value %>
+      </div>
+      <%= form.label name, {:plugin => true, :style => "text-align: left;"}, ["col-sm-10"] %>
+    </div>
+  <% end %>
+
   <div class="subrecord-form-fields">
-    <div class="row">
+    <div class="row" style="clear: both">
       <div class="col-md-6">
-        <%= form.label_and_boolean "books", {:plugin => true}, user_prefs["material_type_books"] %>
-        <%= form.label_and_boolean "games", {:plugin => true}, user_prefs["material_type_games"] %>
-        <%= form.label_and_boolean "maps", {:plugin => true}, user_prefs["material_type_maps"] %>
-        <%= form.label_and_boolean "microforms", {:plugin => true}, user_prefs["material_type_microforms"] %>
-        <%= form.label_and_boolean "realia", {:plugin => true}, user_prefs["material_type_realia"] %>
-        <%= form.label_and_boolean "serials", {:plugin => true}, user_prefs["material_type_serials"] %>
+        <% material_type_form_field.call("books", user_prefs["material_type_books"]) %>
+        <% material_type_form_field.call("games", user_prefs["material_type_games"]) %>
+        <% material_type_form_field.call("maps", user_prefs["material_type_maps"]) %>
+        <% material_type_form_field.call("microforms", user_prefs["material_type_microforms"]) %>
+        <% material_type_form_field.call("realia", user_prefs["material_type_realia"]) %>
+        <% material_type_form_field.call("serials", user_prefs["material_type_serials"]) %>
       </div>
       <div class="col-md-6">
-        <%= form.label_and_boolean "audiovisual_materials", {:plugin => true}, user_prefs["material_type_audiovisual_materials"] %>
-        <%= form.label_and_boolean "electronic_documents", {:plugin => true}, user_prefs["material_type_electronic_documents"] %>
-        <%= form.label_and_boolean "manuscripts", {:plugin => true}, user_prefs["material_type_manuscripts"] %>
-        <%= form.label_and_boolean "photographs", {:plugin => true}, user_prefs["material_type_photographs"] %>
-        <%= form.label_and_boolean "works_of_art", {:plugin => true}, user_prefs["material_type_works_of_art"] %>
+        <% material_type_form_field.call("audiovisual_materials", user_prefs["material_type_audiovisual_materials"]) %>
+        <% material_type_form_field.call("electronic_documents", user_prefs["material_type_electronic_documents"]) %>
+        <% material_type_form_field.call("manuscripts", user_prefs["material_type_manuscripts"]) %>
+        <% material_type_form_field.call("photographs", user_prefs["photographs"]) %>
+        <% material_type_form_field.call("works_of_art", user_prefs["works_of_art"]) %>
       </div>
     </div>
    </div>
